@@ -26,7 +26,7 @@ public class SwitchController : MonoBehaviour {
     
     void OnTriggerEnter2D(Collider2D other) 
     { 
-        if(other.gameObject.CompareTag("Player")) 
+        if(other.gameObject.name == "Lightbulb") 
         {
             playerIsTouching = true;
         }
@@ -34,7 +34,7 @@ public class SwitchController : MonoBehaviour {
 
     void OnTriggerExit2D(Collider2D other) 
     { 
-        if(other.gameObject.CompareTag("Player")) 
+        if(other.gameObject.name == "Lightbulb") 
         {
             playerIsTouching = false;
         }
