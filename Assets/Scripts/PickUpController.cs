@@ -35,7 +35,7 @@ public class PickUpController : MonoBehaviour {
         movableGameObject = null;
         for(int i = 0; !movableGameObject && i < castResults.Length; i++) 
         {
-            if(castResults[i].rigidbody.gameObject.CompareTag("Movable")) movableGameObject = castResults[i].rigidbody.gameObject;
+            if(castResults[i].rigidbody && castResults[i].rigidbody.gameObject.CompareTag("Movable")) movableGameObject = castResults[i].rigidbody.gameObject;
         }
         if(!movableGameObject) return;
 	}
